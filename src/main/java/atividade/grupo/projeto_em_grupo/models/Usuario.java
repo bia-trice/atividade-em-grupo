@@ -21,7 +21,7 @@ public class Usuario {
      @Column(name="senha")
     private String senha;
 
-     @Column(name="nome-completo")
+     @Column(name="nome_completo")
     private String nomeCompleto;
 
      @Column(name="data_nascimento")
@@ -30,16 +30,21 @@ public class Usuario {
     @Column(name="cpf")
     private String cpf;
 
+    @Column(name="confsenha")
+    private String confsenha;
+
     public Usuario() {
     }
 
-    public Usuario(Integer id, String email, String senha, String nomeCompleto, String dataNascimento, String cpf) {
+    public Usuario(Integer id, String email, String senha, String nomeCompleto, String dataNascimento, String cpf,
+            String confsenha) {
         this.id = id;
         this.email = email;
         this.senha = senha;
         this.nomeCompleto = nomeCompleto;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
+        this.confsenha = confsenha;
     }
 
     public Integer getId() {
@@ -90,15 +95,14 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-    
+    public String getConfsenha() {
+        return confsenha;
+    }
+
+    public void setConfsenha(String confsenha) {
+        this.confsenha = confsenha;
+    }
 
 
-
-
-
-
-
-
-//teste
 
 }
